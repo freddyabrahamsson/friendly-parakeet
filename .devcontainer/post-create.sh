@@ -8,3 +8,6 @@ uv tool install --python 3.14 linode-cli
 
 chmod +x .devcontainer/install-opentofu.sh
 ./.devcontainer/install-opentofu.sh --install-method standalone
+
+bash .devcontainer/install-flux.sh
+flux plugin install operator
