@@ -1,0 +1,25 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "friendly-parakeet",
+	"runArgs": ["--name", "friendly-parakeet-dev"],
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"postCreateCommand": "bash .devcontainer/post-create.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"redhat.vscode-yaml",
+				"lfs.vscode-emacs-friendly",
+				"OpenTofu.vscode-opentofu",
+				"mistralai.mistral-vibe-code"
+			]
+		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+			"minikube": "none"
+		}
+	}
+}
